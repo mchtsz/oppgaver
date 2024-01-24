@@ -1,3 +1,4 @@
+// defines user with a type
 type User = {
     id: number;
     name: string;
@@ -5,6 +6,7 @@ type User = {
     birthdate: Date;
 };
 
+// Array of users
 const users: User[] = [
     {
         id: 1,
@@ -14,10 +16,12 @@ const users: User[] = [
     },
 ];
 
+// function for adding a user to the users array
 const addUser = (user: User) => {
     users.push(user);
 }
 
+// Example:
 /* 
 addUser({
     id: 2,
@@ -27,8 +31,7 @@ addUser({
 })
 */
 
+// function for getting users from array
 const getUser = (id: number) => {
     return users.find(user => user.id === id);
 }
-
-console.log(users)
